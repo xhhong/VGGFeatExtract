@@ -52,6 +52,7 @@ def main(argv):
   oversample = False
   if args.oversample:
     oversample = True
+  #feture extraction
   extractor = FeatExtractor(args.model_def, args.pretrained_model, oversample=oversample)
   blobs = args.layers.split(',')
   with open(args.video_list) as f:
